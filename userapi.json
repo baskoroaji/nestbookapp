@@ -1,0 +1,81 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Users API",
+    "description": "Simple RESTful API for Users",
+    "version": "1.0",
+    "contact": {
+      "name": "Aji",
+      "email": "gkO6H@example.com",
+      "url": "https://github.com/sayoor"
+    },
+    "license": {
+      "name": "APACHE 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+
+  "servers": [
+    {
+      "url": "https://localhost:{port}/users",
+      "description": "User RESTful API server",
+      "variables": {
+        "environment": {
+          "default": "dev",
+          "description": "server environment",
+          "enum": ["dev"]
+        },
+        "port": {
+          "enum": ["3000"],
+          "default": "3000"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/my":{
+      "get":{
+        "description": "Get current user",
+        "summary": "Get current user",
+        "operationId": "getCurrentUser",
+        "responses": {
+          "200": {
+            "description": "Get current user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    },
+    "/{userId}":{
+      "patch":{
+        "description": "Update current user",
+        "summary": "Update current user",
+        "operationId": "updateCurrentUser",
+        "responses": {
+          "200": {
+            "description": "Update current user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
