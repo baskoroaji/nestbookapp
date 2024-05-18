@@ -38,6 +38,17 @@
         "description": "Get current user",
         "summary": "Get current user",
         "operationId": "getCurrentUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "description": "User ID",
+            "schema":{
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Get current user",
@@ -60,6 +71,15 @@
         "description": "Update current user",
         "summary": "Update current user",
         "operationId": "updateCurrentUser",
+        "parameters": [{
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "description": "User ID for updateCurrentUser",
+          "schema":{
+            "type": "string"
+          }
+        }],
         "responses": {
           "200": {
             "description": "Update current user",
